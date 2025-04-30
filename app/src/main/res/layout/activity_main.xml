@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="708dp"
         android:layout_marginEnd="664dp"
-        android:scaleX="5"
+        android:scaleX="6"
         android:scaleY="5"
         android:text="Button"
         app:layout_constraintEnd_toEndOf="parent"
