@@ -1,6 +1,9 @@
 package jp.ac.gifu_u.shimizu.myapplication423;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,7 +11,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    TextView text = (TextView)findViewById(R.id.text1);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +25,14 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        Button b = (Button) findViewById(R.id.button4);
+        b.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        text.setText("アプリを終了しました");
+        finish();
     }
 }
